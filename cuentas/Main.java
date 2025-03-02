@@ -6,7 +6,7 @@ package cuentas;
 public class Main {
 
     public static void main(String[] args) {
-        operativa_cuenta(695f); // Llamamos al nuevo método con una cantidad de ejemplo
+        operativa_cuenta(2300); // Llamamos al nuevo método operativa_cueta
     }
 
     /**
@@ -23,16 +23,17 @@ public class Main {
         System.out.println("El saldo actual es " + saldoActual + "€");
 
         try {
-            cuenta1.retirar(2300);
+            System.out.println("Retirada en cuenta de " + cantidad +"€"); // Modificamos para que muestre la cantidad y el símbolo de "€"
+            cuenta1.retirar(cantidad);
         } catch (Exception e) {
             System.out.println("Fallo al retirar");
         }
-
         try {
-            System.out.println("Ingreso en cuenta");
-            cuenta1.ingresar(cantidad);
+            System.out.println("Ingreso en cuenta de 695€"); //Modificamos para que muestre el importe del ingreso
+            cuenta1.ingresar(695);
         } catch (Exception e) {
             System.out.println("Fallo al ingresar");
         }
+        System.out.println("El saldo actual después de las operaciones es " + cuenta1.estado() + "€");   
     }
 }
