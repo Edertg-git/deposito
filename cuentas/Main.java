@@ -6,16 +6,16 @@ package cuentas;
 public class Main {
 
     public static void main(String[] args) {
-        operativa_cuenta(695.0f); // Llamamos a operativa_cuenta con una cantidad de ingreso
+        operativa_cuenta(695f); // Llamamos al nuevo método con una cantidad de ejemplo
     }
 
     /**
-     * Método que realiza operaciones sobre una cuenta bancaria.
+     * Método que realiza la operativa de la cuenta.
      * 
-     * @param cantidad Cantidad de dinero a ingresar en la cuenta.
+     * @param cantidad Cantidad a ingresar en la cuenta
      */
     public static void operativa_cuenta(float cantidad) {
-        CCuenta cuenta1; // sustituimos micuenta por cuenta1
+        CCuenta cuenta1; // Variable de cuenta
         double saldoActual;
 
         cuenta1 = new CCuenta("Antonio López", "1000-2365-85-1230456789", 2500, 0);
@@ -30,7 +30,7 @@ public class Main {
 
         try {
             System.out.println("Ingreso en cuenta");
-            cuenta1.ingresar(cantidad); // Se usa la cantidad recibida por parámetro
+            cuenta1.ingresar(cantidad);
         } catch (Exception e) {
             System.out.println("Fallo al ingresar");
         }
