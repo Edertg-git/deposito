@@ -4,7 +4,11 @@ package cuentas;
  * Clase que gestiona la operativa de la cuenta.
  */
 public class Main {
-
+	/**
+     * Método principal que ejecuta la operativa de la cuenta.
+     * Llamamos al método {@code operativa_cuenta} con una cantidad de ejemplo(2300).
+     *
+     */
     public static void main(String[] args) {
         operativa_cuenta(2300); // Llamamos al nuevo método operativa_cueta
     }
